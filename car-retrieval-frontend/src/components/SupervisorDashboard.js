@@ -297,6 +297,12 @@ const SupervisorDashboard = () => {
     }
   };
 
+  // Helper for image path
+  const getValetImgUrl = (filename) =>
+    filename
+      ? `${BE_URL}/uploads/${filename}`
+      : "https://via.placeholder.com/150x80?text=No+Image";
+
   return (
     <div className="min-h-screen bg-gray-100">
       <div className="bg-white shadow px-6 py-4 flex justify-between items-center">
@@ -640,16 +646,18 @@ const SupervisorDashboard = () => {
                   <div className="flex gap-4 mt-2">
                     <div>
                       <p className="font-semibold">DL Front:</p>
+                      
                       <img
-                        src={`${BE_URL}/uploads/${selectedValet.dlfront}`}
+                        src={getValetImgUrl(selectedValet.dl_front)}
                         alt="DL Front"
                         className="w-40 border rounded"
                       />
                     </div>
                     <div>
                       <p className="font-semibold">DL Back:</p>
+                      
                       <img
-                        src={`${BE_URL}/uploads/${selectedValet.dlback}`}
+                        src={getValetImgUrl(selectedValet.dl_back)}
                         alt="DL Back"
                         className="w-40 border rounded"
                       />
@@ -752,8 +760,3 @@ const SupervisorDashboard = () => {
 };
 
 export default SupervisorDashboard;
-
-
-//test code//
-
-

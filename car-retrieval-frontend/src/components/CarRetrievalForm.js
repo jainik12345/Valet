@@ -81,14 +81,6 @@ const CarRetrievalForm = () => {
 
     setVehicleNotFound(false);
 
-    // const payload = {
-    //   ...formData,
-    //   basement_number: matchedCarInfo.basement_number || "",
-    //   lot_number: matchedCarInfo.lot_number || "",
-    //   valet: matchedCarInfo.valet || "",
-    //   time_taken: matchedCarInfo.time_taken || "",
-    // };
-
     const payload = {
       name: formData.name,
       phone_number: formData.phone_number,

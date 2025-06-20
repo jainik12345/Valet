@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const ConfirmationPage = () => {
   const [timeTaken, setTimeTaken] = useState(null);
@@ -13,17 +13,21 @@ const ConfirmationPage = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <div className="bg-white shadow px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-purple-600">Vehicle Information</h1>
+        <h1 className="text-xl font-bold text-purple-600">
+          Vehicle Information
+        </h1>
         <img src="/logo.png" alt="Company Logo" className="h-10" />
       </div>
 
       <div className="flex justify-center px-4 mt-8">
         <div className="w-full max-w-md bg-white p-6 rounded-lg shadow text-center">
-          <h2 className="text-2xl font-semibold mb-4 text-purple-600">Thank You!</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-purple-600">
+            Thank You!
+          </h2>
 
           {timeTaken ? (
             <p className="text-gray-700">
-              Your car will arrive in{' '}
+              Your car will arrive in{" "}
               <span className="font-semibold">{timeTaken}</span> min.
             </p>
           ) : (

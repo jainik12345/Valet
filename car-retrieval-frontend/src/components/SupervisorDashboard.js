@@ -116,11 +116,18 @@ const SupervisorDashboard = () => {
     return `${day}-${month}-${year} ${time}`;
   };
 
+  // const filteredRequests = requests.filter(
+  //   (req) =>
+  //     req.name.toLowerCase().includes(search.toLowerCase()) ||
+  //     req.car_number.toLowerCase().includes(search.toLowerCase()) ||
+  //     req.serial_number.toLowerCase().includes(search.toLowerCase())
+  // );
+
   const filteredRequests = requests.filter(
     (req) =>
-      req.name.toLowerCase().includes(search.toLowerCase()) ||
-      req.car_number.toLowerCase().includes(search.toLowerCase()) ||
-      req.serial_number.toLowerCase().includes(search.toLowerCase())
+      (req.name || "").toLowerCase().includes(search.toLowerCase()) ||
+      (req.car_number || "").toLowerCase().includes(search.toLowerCase()) ||
+      (req.serial_number || "").toLowerCase().includes(search.toLowerCase())
   );
 
   const handleDownload = () => {

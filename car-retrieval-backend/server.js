@@ -257,6 +257,13 @@ app.get("/", (req, res) => {
   res.send("Valets Backend is Running....");
 });
 
+// server.listen(PORT, () => {
+//   console.log(`🚀 Server running at http://localhost:${PORT}`);
+// });
+
+
+
+
 server.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log(`Server Running On Port: ${PORT}`);
 });
